@@ -1,4 +1,4 @@
-﻿using System.Net.Security;
+
 
 class Program
 {
@@ -94,6 +94,20 @@ class Program
 
     static void TaBortProdukt()
     {
+        Console.WriteLine("Ange produkten du vill ta bort:  ");
+        Console.WriteLine();
+        string name = Console.ReadLine();
+    
+        if (inventory.Contains(name))
+        {
+            inventory.Remove(name);
+            Console.WriteLine($"Du tog bort {name}.");
+        }
+        else
+        {
+            Console.WriteLine($"Produkten {name} du beskrev finns ej med. Försök igen.");
+        }
+       
                 
     }
 

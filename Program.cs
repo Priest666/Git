@@ -1,6 +1,4 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
+
 
 class Program
 {
@@ -68,14 +66,28 @@ class Program
 
     static void LäggTillProdukt()
     {
+        Console.Write("Ange namn: ");
+        string name = Console.ReadLine();
 
-        // TODO: Implementera metod för att lägga till produkt
+        if (!string.IsNullOrEmpty(name))
+        {
+            inventory.Add(name);
+            Console.WriteLine($"Produkten {name} lades till!");
+        }
 
+        else
+        {
+            Console.WriteLine("Namnet kan inte vara tomt");
+        }
     }
 
     static void VisaInventarie()
     {
-
+        Console.Clear();
+        foreach (var item in inventory) 
+        {
+            Console.WriteLine($"{item} hittades!");
+        }
         // TODO: Implementera metod för att visa inventarie
 
     }
@@ -96,11 +108,12 @@ class Program
             Console.WriteLine($"Produkten {name} du beskrev finns ej med. Försök igen.");
         }
        
+                
     }
 
     static void SökProdukt()
     {
-
+       
     }
 
 }

@@ -99,7 +99,14 @@ class Program
 
     static void SökProdukt()
     {
-       
+        Console.WriteLine("Ange produktnamn");
+        string name = Console.ReadLine();
+        if (inventory.Contains(name))
+        {
+            Console.WriteLine($"{name}");
+
+        }
+
     }
 
 }

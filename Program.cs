@@ -64,9 +64,19 @@
 
     static void LäggTillProdukt()
     {
+        Console.Write("Ange namn: ");
+        string name = Console.ReadLine();
 
-        // TODO: Implementera metod för att lägga till produkt
+        if (!string.IsNullOrEmpty(name))
+        {
+            inventory.Add(name);
+            Console.WriteLine($"Produkten {name} lades till!");
+        }
 
+        else
+        {
+            Console.WriteLine("Namnet kan inte vara tomt");
+        }
     }
 
     static void VisaInventarie()

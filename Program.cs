@@ -104,7 +104,6 @@ class Program
         if (inventory.Contains(name))
         {
             Console.WriteLine($"{name}");
-
         }
 
     }

@@ -1,15 +1,9 @@
-﻿using System;
-
-using System.Collections.Generic;
-
-class Program
-
+﻿class Program
 {
 
     static List<string> inventory = new List<string>();
 
     static void Main(string[] args)
-
     {
 
         Console.WriteLine("Välkommen till Fabrikshanteringssystemet!");
@@ -17,7 +11,6 @@ class Program
 
 
         while (true)
-
         {
 
             Console.WriteLine("\nVälj en åtgärd:");
@@ -49,8 +42,11 @@ class Program
                     break;
 
                 case "3":
-
-                    return;
+                    TaBortProdukt();
+                    break;
+                    case "4":
+                    SökProdukt();
+                    break;
 
                 default:
 
@@ -65,7 +61,6 @@ class Program
     }
 
     static void LäggTillProdukt()
-
     {
 
         // TODO: Implementera metod för att lägga till produkt
@@ -73,10 +68,19 @@ class Program
     }
 
     static void VisaInventarie()
-
     {
 
         // TODO: Implementera metod för att visa inventarie
+
+    }
+
+    static void TaBortProdukt()
+    {
+
+    }
+
+    static void SökProdukt()
+    {
 
     }
 

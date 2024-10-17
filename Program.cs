@@ -19,14 +19,15 @@
 
             Console.WriteLine("2. Visa inventarie");
 
-            Console.WriteLine("3. Avsluta");
+            Console.WriteLine("3. Ta bort produkt");
+
+            Console.WriteLine("4. Sök produkt");
 
 
 
             string val = Console.ReadLine();
 
             switch (val)
-
             {
 
                 case "1":
@@ -44,7 +45,8 @@
                 case "3":
                     TaBortProdukt();
                     break;
-                    case "4":
+
+                case "4":
                     SökProdukt();
                     break;
 

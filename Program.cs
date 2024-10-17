@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Net.Security;
+
+class Program
 {
 
     static List<string> inventory = new List<string>();
@@ -81,19 +83,23 @@
 
     static void VisaInventarie()
     {
-
+        Console.Clear();
+        foreach (var item in inventory) 
+        {
+            Console.WriteLine($"{item} hittades!");
+        }
         // TODO: Implementera metod för att visa inventarie
 
     }
 
     static void TaBortProdukt()
     {
-
+                
     }
 
     static void SökProdukt()
     {
-
+       
     }
 
 }
